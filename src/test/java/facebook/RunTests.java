@@ -23,37 +23,34 @@ public class RunTests
         app = new App(driver);
         
         App.loginPage.load();
-        //App.loginPage.enterCredentials("ninitests@gmail.com", "Pass123w");//Neermal
-        //App.taskbar.search("Nini Tests");
-        //App.profilePage.add_friend();
-        //App.loginPage.enterCredentials("ninistudies@gmail.com", "Pass123w");//Nini
-        //App.friendRequestPage.load();
-        //App.friendRequestPage.approve("Neermal Tests");
-        //App.loginPage.enterCredentials("ninitests@gmail.com", "Pass123w");//Neermal
-        //App.profilePage.load("Neermal");
-        //App.profilePage.postStatus("Testing this awesome status");
-        //App.tpHomePage.load();
-        //App.tpHomePage.share();
-        //App.loginPage.load();
+        App.loginPage.enterCredentials("ninitests@gmail.com");//Neermal
+        App.taskbar.search("Nini Tests");
+        App.profilePage.add_friend();
+        App.loginPage.enterCredentials("ninistudies@gmail.com");//Nini
+        App.friendRequestPage.load();
+        App.friendRequestPage.approve("Neermal Tests");
+        App.loginPage.enterCredentials("ninitests@gmail.com");//Neermal
+        App.profilePage.load("Neermal");
+        App.profilePage.postStatus("Testing this awesome status");
+        App.tpHomePage.load();
+        App.tpHomePage.share();
+        App.loginPage.load();
     }
     
     @AfterClass
     public static void tearDown() 
     {
-        App.loginPage.enterCredentials("ninitests@gmail.com", "Pass123w");//Neermal
+        App.loginPage.enterCredentials("ninitests@gmail.com");//Neermal
         App.profilePage.load("Neermal");
         App.profilePage.deletePost("Testing this awesome status");
-        //App.profilePage.load("Neermal");
-        //App.profilePage.deletePost("Selenium IDE: Browser Automation Testing Tool");
+        App.profilePage.load("Neermal");
+        App.profilePage.deletePost("Selenium IDE: Browser Automation Testing Tool");
         
-
-
-
         // Require friends profile id to navigate straight to profile to improve robustness
         //App.taskbar.search("Neermal Tests");
         //App.profilePage.unfriend();
         //----------------------------------------------------------------------------------
        
-        //driver.quit();
+        driver.quit();
     }
 }

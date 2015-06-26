@@ -14,6 +14,7 @@ public class LoginPage
     private WebElement pass;
     private WebDriver driver;
     private String url = "http://facebook.com";
+    private String password = "Pass123w";
     
     public LoginPage(WebDriver driver)
     {
@@ -26,17 +27,17 @@ public class LoginPage
         driver.get(url);
     }
     
-    public void enterCredentials(String username, String password)
+    public void enterCredentials(String username)
     {
         if(driver.findElements(By.id("email")).size() == 0)
         {
             RunTests.app.taskbar.logout();
         }
         Utilities.wait_visible("id", "email");
-        submitLogin(username,password);
+        submitLogin(username);
     }
     
-    private void submitLogin(String username, String password)
+    private void submitLogin(String username)
     {
         email.sendKeys(username);
         pass.sendKeys(password);

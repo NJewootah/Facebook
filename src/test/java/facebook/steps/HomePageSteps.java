@@ -12,7 +12,7 @@ public class HomePageSteps
     {
         if(user.equals("Nini"))
         {
-            App.loginPage.enterCredentials("ninistudies@gmail.com", "Pass123w");
+            App.loginPage.enterCredentials("ninistudies@gmail.com");
         }
         else
         {
